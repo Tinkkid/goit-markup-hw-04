@@ -53,6 +53,7 @@ img {
 .nav {
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .logo-letters {
@@ -87,7 +88,6 @@ img {
   color: var(--logo-button-text-color);
 }
 .site-nav {
-  display: block;
   display: flex;
 }
 
@@ -106,7 +106,6 @@ img {
   padding-bottom: 32px;
   /* display: flex;
   align-items: center; */
-
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -122,7 +121,6 @@ img {
 .contact {
   margin-left: auto;
   display: flex;
-  align-items: center;
 }
 .contact .item:not(:last-child) {
   margin-right: 30px;
@@ -140,6 +138,7 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 6px;
   background-color: var(--background-color-added);
   text-align: center;
   background-image: linear-gradient(to right, var(--hero-bg-overlay), var(--hero-bg-overlay)),    url('../images/images-index/hero.jpg');
