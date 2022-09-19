@@ -302,8 +302,6 @@ img {
 .clients {
   display: flex;
   gap:30px;
-  justify-content: center;
-
 }
 .clients-link {
   display: flex;
