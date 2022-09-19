@@ -16,6 +16,7 @@
   --hero-bg-overlay: rgba(47, 48, 58, 0.4);
   --fill-svg-social:#AFB1B8;
   --portfolio-cards-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --background-footer-social:rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -104,8 +105,8 @@ img {
 .site-contacts {
   padding-top: 32px;
   padding-bottom: 32px;
-  /* display: flex;
-  align-items: center; */
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -125,10 +126,6 @@ img {
 .contact .item:not(:last-child) {
   margin-right: 30px;
 }
-.contact .item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
 
 /* Hero */
 .hero {
@@ -138,7 +135,6 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 6px;
   background-color: var(--background-color-added);
   text-align: center;
   background-image: linear-gradient(to right, var(--hero-bg-overlay), var(--hero-bg-overlay)),    url('../images/images-index/hero.jpg');
@@ -219,7 +215,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-background-color);
-  
+  border-radius: 4px
 }
 .work {
   padding-bottom: 94px;
@@ -280,14 +276,12 @@ img {
   margin-right: 30px;
 }
 
-.icon-social {
- background-color:var(--primary-background-color)
-}
 .social {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
+
 .social-background {
   display: flex;
   justify-content: center;
@@ -295,7 +289,6 @@ img {
   padding: 0;
   width: 44px;
   height: 44px;
-  background-color: none;
   border-radius: 50%;
   fill: var(--fill-svg-social);
 }
@@ -312,7 +305,8 @@ img {
   justify-content: center;
 
 }
-.clients-background {
+.clients-link {
+  display: flex;
   padding: 0;
   width: 170px;
   height: 92px;
@@ -322,16 +316,13 @@ img {
   border: 1px solid var(--fill-svg-social);
   border-radius: 4px;
 }
-.clients-background:hover,
-.clients-background:focus {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--logo-button-text-color);
+  fill: var(--logo-button-text-color);
 }
 .clients-link {
   fill: var(--fill-svg-social);
-}
-.clients-link:hover,
-.clients-link:focus {
-  fill: var(--logo-button-text-color);
 }
 
 /* Adress */
@@ -390,14 +381,9 @@ img {
    margin-left: 70px;
 
 }
-.container-social-link {
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-}
+
 .social-link {
   display: flex;
-  justify-content: center;
   margin-top: 20px;
   gap: 10px;
 }
@@ -408,7 +394,7 @@ img {
   padding: 0;
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
+  background:var(--background-footer-social);
   border-radius: 50%;
   fill:var(--added-text-color);
 }
@@ -427,10 +413,8 @@ img {
   margin-right: 8px;
 }
 .filtr {
-  padding-bottom: 6px;
-  padding-top: 6px;
-
-  background-color: var(--secondary-background-color);
+  padding: 6px 22px;
+ background-color: var(--secondary-background-color);
   color: var(--secondary-text-color);
   font-family: inherit;
   font-weight: 500;
@@ -447,27 +431,6 @@ img {
   color: var(--added-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-.filtr.link1 {
-  width: 73px; 
-  height: 38px;
-}
-.filtr.link2 {
-  width: 125px; 
-  height: 38px;
-}
-.filtr.link3 {
-  width: 112px; 
-  height: 38px;
-}
-.filtr.link4 {
-  width: 103px; 
-  height: 38px;
-}
-.filtr.link5 {
-  width: 130px; 
-  height: 38px;
 }
 
 /* Hero in Portfolio.html */
@@ -477,11 +440,7 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
-}
-.portfolio .item {
-  width: 370px;
-  margin: 15px;
+  gap: 30px;
 }
 .border-card {
   padding-top: 20px;
@@ -492,13 +451,16 @@ img {
   border-left: var(--color-border-cards);
   border-right: var(--color-border-cards);
 }
-.example:hover,
-.example:focus {
+.portfolio-link:hover {
+  box-shadow: var(--portfolio-cards-shadow);
+}
+.portfolio-link:focus {
   box-shadow: var(--portfolio-cards-shadow);
 }
 
 .portfolio-link {
   text-decoration: none;
+  display: block;
 }
 .portfolio-title {
   margin-bottom: 4px;
